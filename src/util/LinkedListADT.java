@@ -9,6 +9,9 @@ public interface LinkedListADT <T>
 	{
 	   //  Adds one element to the start or end of this list
 	   public void add (T element);
+	   
+	   //Adds the element in its correct sorted position in the list
+	   public void add(T element,int position);
 
 	   //  Removes and returns the first element from this list
 	   public T remove();

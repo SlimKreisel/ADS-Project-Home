@@ -1,5 +1,10 @@
 package application;
-
+/**
+ *File Name:
+ *Author: Khalid Roble
+ *Student Number:C23727729
+ *Description of the class:
+ */
 public class Employee {
 	private String employeeNumber; 
 	private String name;
@@ -7,6 +12,7 @@ public class Employee {
 	private String trainingCourseName;
 	
 	public Employee() {
+		
 		this.employeeNumber = "";
 		this.name = "";
 		this.years = 0;
@@ -63,7 +69,7 @@ public class Employee {
 		return"Employee number is "+this.employeeNumber+"\n\n"+
 	    "Employee name is "+this.name+"\n\n"+
 		"Employee worked for "+this.years+"\n\n"+
-	    "EMployee's trainig Course is "+this.trainingCourseName;
+	    "Employee's trainig Course is "+this.trainingCourseName+"\n\n";
 	}
 	
 	public boolean equals(Object o) {
@@ -74,5 +80,12 @@ public class Employee {
 			return false;
 	}
 	
+	public boolean equalsCourse(Object o) {
+		Employee e = (Employee) o;
+		if(this.trainingCourseName.equalsIgnoreCase(e.getTrainingCourse()))
+		return true;
+		else
+			return false;
+	}
 
 }

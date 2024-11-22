@@ -4,6 +4,12 @@
 //of the standard functions associated with a list.
  
 package util;
+/**
+ *File Name:
+ *Author: Khalid Roble
+ *Student Number:C23727729
+ *Description of the class:
+ */
 
 public interface LinkedListADT <T>
 	{
@@ -17,7 +23,7 @@ public interface LinkedListADT <T>
 	   public T remove();
 	   
 	   // removes and return the elements in different scenario
-	   public T remove(T element);
+	   public T removeEverything(T element);
   
 	   //  Returns true if this list contains no elements
 	   public boolean isEmpty();

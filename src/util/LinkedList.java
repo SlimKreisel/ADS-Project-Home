@@ -1,5 +1,10 @@
 package util;
-
+/**
+ *File Name:
+ *Author: Khalid Roble
+ *Student Number:C23727729
+ *Description of the class:
+ */
 //This class implements the ADT definition of a linked list using the same signatures. Note that we can add extra methods
 //here once all of the methods listed in the ADT interface are included.
 
@@ -115,7 +120,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 	
 	
 	// removes and return the elements in different scenario
-	public T remove(T element)  {
+	public T removeEverything(T element)  {
 		LinearNode<T> current =null;
 		LinearNode<T>previous =null;
 		T result = null;

@@ -1,9 +1,9 @@
 package util;
 /**
- *File Name:
+ *File Name: Linkedlist
  *Author: Khalid Roble
  *Student Number:C23727729
- *Description of the class:
+ *Description of the class: it implements the ADT definition of a linked list using the same signatures.
  */
 //This class implements the ADT definition of a linked list using the same signatures. Note that we can add extra methods
 //here once all of the methods listed in the ADT interface are included.
@@ -151,7 +151,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 					  result = this.last.getElement();
 						temp = this.last;
 						this.last = previous; // Update last to the second-last node
-						temp.setNext(null);  //dereference/completely removing
+						previous.setNext(null);  //dereference/completely removing
 						count--;
 						return result;
 				  }
@@ -187,7 +187,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 		   return this.count;
 	   }
 	   
-
+	   // it gets the element at the specified index
 	  public T get(int i) {
 		  if(i<0) {
 			  return null;
@@ -206,6 +206,7 @@ public class LinkedList<T> implements LinkedListADT<T> {
 		  
 	  }
 	  
+	  // Check if the specified element exists in the linked list
 	  public boolean contains(T element) {
 		  LinearNode<T> look ;
 		  
@@ -216,8 +217,38 @@ public class LinkedList<T> implements LinkedListADT<T> {
 		  }
 		  return false;
 		  
+	  }
+	  
+	  // Returns the first node of the linked list
+	  public LinearNode<T> returnFirstNode(){
+		  return this.front;
+	  }
+	  
+	  // return the last node of the linked list
+	  public LinearNode<T> returnLastNode(){
+		  LinearNode<T> current =this.front;
+		 while(current.getNext() != null) {
+			 current = current.getNext();
+		 }
 		  
-		 
+		  
+		  return current;
+	  }
+	  
+	  // Return the element stored in the first node of the linked list
+	  public T getFirstElement() {
+		  return front.getElement();
+		  
+	  }
+	  
+	  // Return the element stored in the last Node of the linked List
+	  public T getLastElement() {
+		  return returnLastNode().getElement();
+	  }
+	  
+	  // Returns the element stored in the node following the specified node
+	  public T getNextElement(LinearNode <T> current) {
+		 return current.getNext().getElement();
 	  }
 	  
 

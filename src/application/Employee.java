@@ -1,9 +1,9 @@
 package application;
 /**
- *File Name:
+ *File Name: Employee Class
  *Author: Khalid Roble
  *Student Number:C23727729
- *Description of the class:
+ *Description of the class: It contains the employee data with constructors, setter and getter methods,the method of the details
  */
 public class Employee {
 	private String employeeNumber; 
@@ -21,9 +21,24 @@ public class Employee {
 	}
 	
 	public Employee(String number,String name, int years, String courseName) {
+		
+		do {
+			
+			if(years<5) {
+				System.out.println("Experience need to be more than 5 years");
+			}
+			else
+				this.years = years;
+			
+		}while(years<5);
+		
+		if(!courseName.startsWith("FOOD")) {
+			System.out.println("Invalid input. Training Course is set to ERROR !");
+			courseName = "ERROR";
+		}
+		
 		this.employeeNumber = number;
 		this.name = name;
-		this.years = years;
 		this.trainingCourseName  = courseName;
 		
 	}
@@ -69,7 +84,7 @@ public class Employee {
 		return"Employee number is "+this.employeeNumber+"\n\n"+
 	    "Employee name is "+this.name+"\n\n"+
 		"Employee worked for "+this.years+"\n\n"+
-	    "Employee's trainig Course is "+this.trainingCourseName+"\n\n";
+	    "Employee's training Course is "+this.trainingCourseName+"\n\n";
 	}
 	
 	public boolean equals(Object o) {

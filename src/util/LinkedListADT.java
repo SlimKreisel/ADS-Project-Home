@@ -5,10 +5,10 @@
  
 package util;
 /**
- *File Name:
+ *File Name: LinkedListADT
  *Author: Khalid Roble
  *Student Number:C23727729
- *Description of the class:
+ *Description of the class: this class shows the abstract data type definition for the linked list
  */
 
 public interface LinkedListADT <T>
@@ -34,9 +34,26 @@ public interface LinkedListADT <T>
 	   //  Returns a string representation of this list
 	   public String toString();
 	   
+	   // it gets the element at the specified index
 	   public T get(int i);
 	   
+	// Check if the specified element exists in the linked list
 	   public boolean contains(T element);
+	   
+	// Returns the first node of the linked list
+	   public LinearNode<T> returnFirstNode();
+	   
+	// return the last node of the linked list
+	   public LinearNode<T> returnLastNode();
+	   
+	   // Return the element stored in the first node of the linked li
+	   public T getFirstElement();
+	   
+	   // Return the element stored in the last Node of the linked List
+	   public T getLastElement();
+	   
+	// Returns the element stored in the node following the specified node
+	   public T getNextElement(LinearNode <T> current);
 	
 
 }

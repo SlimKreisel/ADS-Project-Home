@@ -1,4 +1,7 @@
 package application;
+
+import java.util.Scanner;
+
 /**
  *File Name: Employee Class
  *Author: Khalid Roble
@@ -19,13 +22,26 @@ public class Employee {
 		this.trainingCourseName = "";
 		
 	}
+	public Employee(String employeeNumber,String trainingCourseName ) {
+		
+		this.employeeNumber = employeeNumber;
+		this.name = "";
+		this.years = 0;
+		this.trainingCourseName = trainingCourseName;
+		
+	}
+	
+
+	
 	
 	public Employee(String number,String name, int years, String courseName) {
-		
+		Scanner kreisel = new Scanner(System.in);
 		do {
 			
 			if(years<5) {
 				System.out.println("Experience need to be more than 5 years");
+				years = kreisel.nextInt();
+//				kreisel.nextLine();
 			}
 			else
 				this.years = years;

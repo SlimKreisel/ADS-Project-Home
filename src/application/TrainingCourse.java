@@ -16,12 +16,14 @@ public class TrainingCourse {
 
 	public TrainingCourse() {
 		linkList = new LinkedList<>();
-//	inputEmployee();
-		linkList.add(new Employee("C1", "Slim", 5, "FOOD"));
-		linkList.add(new Employee("K", "S", 6, "FOOD"));
-		linkList.add(new Employee("C1", "F", 7, "FOOD"));
-		linkList.add(new Employee("K", "G", 8, "FOOD"));
-		linkList.add(new Employee("C1", "T", 9, "FOOD"));
+		
+//		linkList.add(new Employee("C1", "Slim", 5, "FOOD"));
+//		linkList.add(new Employee("K", "S", 6, "FOOD"));
+//		linkList.add(new Employee("C1", "F", 7, "FOOD"));
+//		linkList.add(new Employee("K", "G", 8, "FOOD"));
+//		linkList.add(new Employee("C1", "T", 7, "FOOD"));
+		
+		inputEmployee();
 		displayEmployee();
 		addOneMoreEmployee();
 		displayEmployee();
@@ -31,7 +33,7 @@ public class TrainingCourse {
 		displayEmployee();
 
 	}
-
+		// That methods input the employee into the ArrayList
 	public void inputEmployee() {
 		Scanner kreisel = new Scanner(System.in);
 
@@ -83,12 +85,12 @@ public class TrainingCourse {
 		}
 
 	}
-
+	// The method displays the employee
 	public void displayEmployee() {
 		System.out.println("\nDisplaying all Books....");
 		System.out.println(linkList.toString());
 	}
-
+	// That method removes the employee based on the Employee Number
 	public void removeEmployee() {
 		Scanner kreisel = new Scanner(System.in);
 		String removeNumber = "";
@@ -119,7 +121,7 @@ public class TrainingCourse {
 		}
 
 	}
-
+	// That method removes the employee based on the training Course
 	public void removeTrainingCourse() {
 
 		Scanner kreisel = new Scanner(System.in);
@@ -157,7 +159,7 @@ public class TrainingCourse {
 	}
 	
 	
-
+	// That method is my extra function that i create, where it inputs an extra employee,but this time on the specific position
 	public void addOneMoreEmployee() {
 		Scanner kreisel = new Scanner(System.in);
 
